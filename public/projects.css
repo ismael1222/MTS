@@ -1,0 +1,12 @@
+table a {
+    text-decoration: underline;
+    padding-right: 15px;
+}
+
+table {
+    text-align: left;
+}
+
+td {
+    width: 30vw
+}

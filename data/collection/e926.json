@@ -1,0 +1,36 @@
+{
+    "name": "e926",
+    "img": "https://e926.net/favicon.svg",
+    "api": {
+        "base": "https://e926.net",
+        "viewPost": "https://e926.net/posts/$ID$",
+        "search": {
+            "base": "posts.json",
+            "method": "GET",
+            "limit": "limit",
+            "page": "page",
+            "tags": "tags",
+            "urlValues": {
+                "v2": "true"
+            },
+            "response": {
+                "type": "array",
+                "id": "id",
+                "md5": "files.meta.md5",
+                "tag_string": "tags",
+                "file_url": "files.sample.jpg",
+                "large_file_url": "files.original.url"
+            }
+        },
+        "updateTags": {
+            "base": "posts/$ID$.json",
+            "method": "PATCH",
+            "type": "diff",
+            "bodyValues": {
+                "post": {
+                    "tag_string_diff": "$TAG_STRING$"
+                }
+            }
+        }
+    }
+}

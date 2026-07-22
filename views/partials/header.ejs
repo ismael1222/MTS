@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/all.css">
+  <% if(title){ %>
+  <link rel="stylesheet" href="/<%= title %>.css">
+  <script src="/<%= title %>.js" defer></script>
+  <%}%>
+  <title>MTS</title>
+</head>
+
+<body>
+  <nav class="foreground centered">
+    <p><a href="/">MTS</a></p>
+    <div centered>
+      <a href="../">Back</a>
+      <span> | </span>
+      <a href="/accounts">Account management</a>
+    </div>
+  </nav>

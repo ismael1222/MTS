@@ -1,0 +1,30 @@
+.option {
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.028);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.searchParams {
+    background-color: rgb(0, 0, 0);
+    padding: 4px;
+    font-family: monospace;
+}
+
+td,
+th {
+    text-align: left;
+}
+
+table {
+    width: 100%;
+}
+
+
+.option .space button {
+    border: 0;
+    color: white;
+    background-color: #1f1f26;
+    height: 100%;
+    cursor: pointer;
+}

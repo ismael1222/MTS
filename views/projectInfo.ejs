@@ -1,0 +1,40 @@
+<%- include('partials/header', { title: 'projectInfo' }) %>
+
+<div class="main">
+  <h3>Project <%= project.coolname %></h3>
+  <p class="description"><%= project.description %></p>
+  <p>Options:</p>
+  <%number=0%>
+  <% project.options.forEach(option => {%>
+  <div class="option">
+    <div class="space">
+      <h3><%=option.OptName%></h3>
+      <a href="<%=number%>">
+        <button>Tag using this option</button>
+      </a>
+    </div>
+    <p><%= option.OptDesc%></p>
+    <p class="info">(<%= option.OptSearchParams.split(" ").length %> search params)</p>
+    <p class="searchParams"><%=option.OptSearchParams%></p>
+    <table>
+      <tbody>
+        <tr>
+          <th>Name</th>
+          <th>Add</th>
+          <th>Remove</th>
+        </tr>
+
+        <% option.OptTagEdits.forEach(edit=>{%>
+        <tr>
+          <td><%= edit.name %></td>
+          <td><%= edit.diff.split(' ').filter(function(t) { return !t.startsWith('-'); }).join(' ') %></td>
+          <td><%= edit.diff.split(' ').filter(function(t) { return t.startsWith('-'); }).join(' ') %></td>
+        </tr>
+        <%}) %>
+      </tbody>
+    </table>
+  </div>
+  <% }) %>
+</div>
+
+<%- include('partials/footer', { title: 'projectInfo' }) %>

@@ -1,0 +1,42 @@
+body {
+    background-color: #1f1f26;
+    color: white;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+}
+
+.main {
+    padding: 20px;
+}
+
+nav {
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+.foreground {
+    background-color: #272730;
+}
+
+.logo {
+    width: 64px;
+    border-radius: 100%;
+    margin: 7px;
+    background: black;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.centered {
+    display: flex;
+    align-items: center;
+}
+
+.space {
+    display: flex;
+    justify-content: space-between;
+}

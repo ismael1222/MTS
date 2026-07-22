@@ -1,0 +1,24 @@
+<%- include('partials/header', { title: 'tagging' }) %>
+<div id="showcase" class="width" onclick="toggleResolution(this)">
+  <div class="options">
+    <button onclick="initialFetch()" id="startButton">Start</button>
+  </div>
+</div>
+<hr>
+<div id="added" class="writeable" contenteditable="true"></div>
+<div id="tags" class="writeable"></div>
+<div class="buttons">
+  <button id="skip" onclick="skip()" disabled>Skip</button>
+  <a id="link">Post link</a>
+  <button id="submit" disabled onclick="submit()">Submit</button>
+</div>
+<div class="main">
+  <% projectOptions.OptTagEdits.forEach(option=>{ %>
+  <div class="option" onclick="selectMe(this)">
+    <p class="title"> <%= option.name %></p>
+    <p class="tags"> <%= option.diff %></p>
+  </div>
+
+  <% }) %>
+</div>
+<%- include('partials/footer', { title: 'tagging' }) %>

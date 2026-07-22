@@ -1,0 +1,27 @@
+<%- include('partials/header', { title: 'projects' }) %>
+
+<div class="main">
+  <h4 class="centered">
+    Projects for
+    <img class="logo" src="<%= data.img %>">
+    <%= data.name %>
+  </h4>
+  <table>
+    <tbody>
+      <tr>
+        <th>Name</th>
+        <th>description</th>
+      </tr>
+      <% for (let key in projects) { %>
+      <tr>
+        <td> <a href="<%= projects[key].name %>/"><%= projects[key].coolname %></a>
+        </td>
+        <td>
+          <p><%= projects[key].description %></p>
+        </td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+</div>
+<%- include('partials/footer', { title: 'projects' }) %>

@@ -1,0 +1,14 @@
+#ignore node things
+node_modules/
+#ignore env
+.env
+#dont upload accounts, duh
+data/accounts.json
+#selective ignore
+data/*
+!data/accounts.example.json
+!data/collection
+data/collection/*
+!data/collection/e926.json
+#to-do list (local-only)
+todo.*

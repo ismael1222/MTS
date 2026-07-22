@@ -1,0 +1,26 @@
+<%- include('partials/header', { title: 'accounts' }) %>
+
+<div class="main">
+  <h3>Account list</h3>
+  <% if (boorus && typeof boorus==='object' ) { %>
+  <% Object.keys(boorus).forEach(function(key) { %>
+  <% const booru=boorus[key]; const account=(accounts && accounts[key]) ? accounts[key] : { username: '' ,
+                    key: '' }; %>
+  <details>
+    <summary>
+      <div class="booruList"> <img class="logo" src="<%= booru.img %>" alt="<%= booru.name %>">
+        <p>
+          <%= booru.name %>
+        </p>
+      </div>
+    </summary>
+    <p>Username:</p> <input class="username" type="text" value="<%= account.username %>">
+    <p>Key:</p> <input class="key" type="password" value="<%= account.key %>"><br>
+    <button onclick="save(this, '<%= key %>')">save (click twice)</button>
+  </details>
+  <% }); %>
+  <% } else { %>
+  <p>No booru data available.</p>
+  <% } %>
+</div>
+<%- include('partials/footer', { title: 'accounts' }) %>

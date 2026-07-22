@@ -1,0 +1,17 @@
+<%- include('partials/header', { title: 'home' }) %>
+
+<div class="main">
+  <% for (var key in boorus) { %>
+  <% if (boorus.hasOwnProperty(key)) { %>
+  <a href="/booru/<%= key %>/">
+    <div class="entry centered">
+      <img class="logo" src="<%= boorus[key].img %>" alt="">
+      <p><%= boorus[key].name %></p>
+    </div>
+  </a>
+  <% } %>
+  <% } %>
+</div>
+
+<!--<img src="https://gelbooru.com/layout/gelbooru-logo.svg" alt="Gelbooru">-->
+<%- include('partials/footer', { title: 'home' }) %>

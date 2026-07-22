@@ -1,0 +1,91 @@
+#showcase {
+    display: flex;
+    justify-content: center;
+    min-height: 300px;
+}
+
+#showcase.height img,
+#showcase.height video {
+    height: calc(100vh - 35px);
+    width: auto;
+}
+
+#showcase.width img,
+#showcase.width video {
+    height: auto;
+    width: calc(100vw - 6px);
+    min-height: 50px;
+}
+
+hr {
+    margin: 0
+}
+
+#startButton {
+    margin: 100px;
+}
+
+#tags,
+#added {
+    background-color: rgba(240, 248, 255, 0.102);
+    margin: 3px;
+    border-radius: 5px;
+    font-family: monospace;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button {
+    width: 200px;
+    margin: 30px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+
+.buttons button[disabled] {
+    border-bottom: solid rgba(255, 0, 0, 0.4) 5px;
+}
+
+#submit {
+    background-color: green;
+}
+
+#skip {
+    background-color: blue;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.option {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    display: grid;
+    text-align: center;
+}
+
+.title {
+    border-bottom: 1px solid black;
+}
+
+.tags {
+    font-family: monospace;
+}
+
+.selected {
+    border: 1px solid rgb(255, 255, 255);
+}
+
+a#link {
+    height: 100%;
+    vertical-align: center;
+    margin: auto;
+}
